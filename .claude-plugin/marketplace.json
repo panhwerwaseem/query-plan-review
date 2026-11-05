@@ -1,0 +1,15 @@
+{
+  "name": "panhwerwaseem-query-plan-review",
+  "owner": {
+    "name": "Muhammad Waseem Panhwar",
+    "url": "https://github.com/panhwerwaseem"
+  },
+  "description": "Single-skill marketplace for query-plan-review.",
+  "plugins": [
+    {
+      "name": "query-plan-review",
+      "source": "./",
+      "description": "Reads a PostgreSQL EXPLAIN ANALYZE plan and a pg_stat_statements export, reports the bottleneck with the plan node and the numbers behind it, and traces the query back to the ORM call that produced it."
+    }
+  ]
+}

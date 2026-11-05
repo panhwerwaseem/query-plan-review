@@ -1,0 +1,17 @@
+queryid,calls,total_exec_time,mean_exec_time,rows,query
+4821093377120549163,288,1386028.8,4812.6,8640,"SELECT date_trunc($1, ""shop_order"".""created_at"") AS day,
+       sum(""shop_order"".""total_cents"") AS revenue
+FROM ""shop_order""
+WHERE ""shop_order"".""created_at"" >= $2
+GROUP BY 1
+ORDER BY 1"
+5630918827340115093,1912,356396.8,186.4,5544,"SELECT ""shop_order"".""id"", ""shop_order"".""customer_id"", ""shop_order"".""external_ref"", ""shop_order"".""status"", ""shop_order"".""total_cents"", ""shop_order"".""created_at"" FROM ""shop_order"" WHERE ""shop_order"".""external_ref"" = $1 ORDER BY ""shop_order"".""created_at"" DESC LIMIT $2"
+-2954871120386045771,5120,313856.0,61.3,102400,"SELECT ""shop_product"".""id"", ""shop_product"".""sku"", ""shop_product"".""name"" FROM ""shop_product"" WHERE UPPER(""shop_product"".""name""::text) LIKE UPPER($1) ORDER BY ""shop_product"".""name"" ASC LIMIT $2"
+-7304118220194465512,485760,200133.12,0.412,1457280,"SELECT ""shop_orderitem"".""id"", ""shop_orderitem"".""order_id"", ""shop_orderitem"".""sku"", ""shop_orderitem"".""quantity"", ""shop_orderitem"".""unit_price_cents"" FROM ""shop_orderitem"" WHERE ""shop_orderitem"".""order_id"" = $1"
+7719350014428831202,24288,46875.84,1.93,485760,"SELECT ""shop_order"".""id"", ""shop_order"".""customer_id"", ""shop_order"".""external_ref"", ""shop_order"".""status"", ""shop_order"".""total_cents"", ""shop_order"".""created_at"" FROM ""shop_order"" WHERE ""shop_order"".""customer_id"" = $1 ORDER BY ""shop_order"".""created_at"" DESC LIMIT $2"
+1553902764418220917,8410,3195.8,0.38,8410,"INSERT INTO ""shop_order"" (""customer_id"", ""external_ref"", ""status"", ""total_cents"", ""created_at"") VALUES ($1, $2, $3, $4, $5) RETURNING ""shop_order"".""id"""
+-6120049981174302284,96410,2988.71,0.031,96410,"SELECT ""django_session"".""session_key"", ""django_session"".""session_data"", ""django_session"".""expire_date"" FROM ""django_session"" WHERE (""django_session"".""expire_date"" > $1 AND ""django_session"".""session_key"" = $2) LIMIT $3"
+-880215436790113350,7902,1659.42,0.21,7902,"UPDATE ""shop_order"" SET ""status"" = $1 WHERE ""shop_order"".""id"" = $2"
+3391774205566108842,172800,691.2,0.004,172800,SELECT $1
+-4410283357120996120,16312,309.928,0.019,0,COMMIT
+8802511930047216635,16312,32.624,0.002,0,BEGIN

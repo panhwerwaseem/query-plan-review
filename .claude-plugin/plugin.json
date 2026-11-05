@@ -1,0 +1,12 @@
+{
+  "name": "query-plan-review",
+  "description": "Reads a PostgreSQL EXPLAIN ANALYZE plan and a pg_stat_statements export, reports the bottleneck with the plan node and the numbers behind it, and traces the query back to the ORM call that produced it.",
+  "author": {
+    "name": "Muhammad Waseem Panhwar",
+    "url": "https://github.com/panhwerwaseem"
+  },
+  "homepage": "https://github.com/panhwerwaseem/query-plan-review",
+  "repository": "https://github.com/panhwerwaseem/query-plan-review",
+  "license": "MIT",
+  "keywords": ["postgresql", "query-performance", "explain", "orm", "agent-skills"]
+}

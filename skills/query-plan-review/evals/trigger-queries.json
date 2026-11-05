@@ -1,0 +1,27 @@
+{
+  "skill_name": "query-plan-review",
+  "should_trigger": [
+    "this endpoint takes 4 seconds, here's the EXPLAIN ANALYZE output, what's wrong with it",
+    "should I add an index on orders(customer_id)? the query is slow",
+    "why is postgres doing a seq scan when there's an index on that column",
+    "our Django order page fires hundreds of queries, I think it's an N+1",
+    "here's a pg_stat_statements dump from prod, which queries should we fix first",
+    "the planner estimates 12 rows but gets 40,000, is that why this join is slow",
+    "the plan says Sort Method: external merge Disk: 180MB, is that a problem",
+    "this SQLAlchemy query got slow after the table grew, can you look at the plan",
+    "rails log shows the same SELECT 300 times per request, help me find where it comes from",
+    "can you read this query plan and tell me where the time goes"
+  ],
+  "should_not_trigger": [
+    "write a migration that adds a NOT NULL column to the orders table",
+    "is it safe to run CREATE INDEX on a 200 GB table during business hours",
+    "convert this raw SQL query to a Django ORM queryset",
+    "our Postgres connection pool is exhausted under load, tune PgBouncer",
+    "explain the difference between a hash join and a merge join",
+    "this MongoDB aggregation pipeline is slow, here is the explain output",
+    "the report query returns wrong totals when an order has two discounts",
+    "set up pg_stat_statements and a Grafana dashboard for our database",
+    "two transactions keep deadlocking on the accounts table, help me find out why",
+    "write a SQL query that returns the top 10 customers by revenue"
+  ]
+}
